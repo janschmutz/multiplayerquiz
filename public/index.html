@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+    <link href='https://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
+
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+<div id="gameArea">
+
+</div>
+
+<script id="intro-screen-template" type="text/template">
+
+    <div class="titleWrapper">
+
+        <div class="title">
+            <h1>Naturquizzer</h1>
+        </div>
+
+        <div class="buttons">
+
+            <button class="txtbtn" id="btnJoinGame">Spiel Starten!</button>
+            <img src="svg/island.svg">
+        </div>
+
+    </div>
+
+</script>
+
+
+<script id="join-game-template" type="text/template">
+    <div class="joinGameWrapper">
+        <div class="info">
+            <h3>Dein Name</h3>
+            <input id="inputPlayerName" type="text" />
+        </div>
+        <h3>Dein Avatar</h3>
+        <div class="avatare">
+            <div class="avatar" id="a1" data-avatar="0"><span class="helper"></span><img src="svg/owl.svg"></div>
+            <div class="avatar" id="a2" data-avatar="0"><span class="helper"></span><img src="svg/wolf.svg"></div>
+            <div class="avatar" id="a3" data-avatar="0"><span class="helper"></span><img src="svg/bear.svg"></div>
+        </div>
+
+        <div class="info buttons">
+            <button id="btnStart" class="txtbtn">Los Geht's</button>
+            <div id="playerWaitingMessage"></div>
+        </div>
+    </div>
+</script>
+
+
+<script id="search-op-template" type="text/template">
+    <div id="notawrapper">
+    <h3>Wir suchen dir einen Gegner...</h3>
+    <div class="loader loader--style5" title="4">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+    <rect x="0" y="0" width="4" height="10" fill="#333">
+      <animateTransform attributeType="xml"
+        attributeName="transform" type="translate"
+        values="0 0; 0 20; 0 0"
+        begin="0" dur="0.6s" repeatCount="indefinite" />
+    </rect>
+    <rect x="10" y="0" width="4" height="10" fill="#333">
+      <animateTransform attributeType="xml"
+        attributeName="transform" type="translate"
+        values="0 0; 0 20; 0 0"
+        begin="0.2s" dur="0.6s" repeatCount="indefinite" />
+    </rect>
+    <rect x="20" y="0" width="4" height="10" fill="#333">
+      <animateTransform attributeType="xml"
+        attributeName="transform" type="translate"
+        values="0 0; 0 20; 0 0"
+        begin="0.4s" dur="0.6s" repeatCount="indefinite" />
+    </rect>
+  </svg>
+    </div>
+    </div>
+</script>
+
+
+<script id="countdown-template" type="text/template">
+  <div class="fullwrap">
+      <div class="centered">
+          <h1 id="duell">Duell!</h1>
+          <h1 id="vs">vs</h1>
+          <div class="left" id="mid">
+                <div class="contain" id="myAva">
+                    <!--<img src="svg/a2.svg">-->
+                </div>
+          </div>
+          <div class="right" id="mid2">
+              <div class="contain" id="opAva">
+                  <!--<img src="svg/a2.svg">-->
+              </div>
+          </div>
+          <div class="clear"></div>
+          <div class="left">
+              <div><h2 id="myName"></h2></div>
+              <div class="stats">
+                  <p>Aktueller Rang: Bronze</p>
+                  <p>Gewonnene Spiele: -</p>
+              </div>
+
+          </div>
+          <div class="right" id="line">
+              <div><h2 id="opName"></h2></div>
+              <div class="stats">
+                  <p>Aktueller Rang: Bronze</p>
+                  <p>Gewonnene Spiele: -</p>
+              </div>
+          </div>
+          <div class="schatz">
+              <img id="scha" src="svg/schatz.svg">
+              <p id="schat">100 Goldstuecke</p>
+          </div>
+          <div class="time">
+              <h2 id="timer">20</h2>
+
+          </div>
+      </div>
+  </div>
+</script>
+<script id="quiz-template" type="text/template">
+    <div class="fullwrapper">
+        <div class="centereded">
+            <div class="players">
+                <h3>Spieler</h3>
+                <hr>
+                <div class="whiteboy">
+                    <img id="my_avatar" class="icon-small" src="svg/a1.svg" width="70" height="70">
+                    <p class="insertid" id="my_name"></p>
+                    <p class="score"><span id="my_score" ></span>Pt.</p>
+                </div>
+                <div class="whiteboy">
+                    <img class="icon-small" id="opp_avatar" src="svg/a1.svg" width="70" height="70">
+                    <p class="insertid" id="opp_name"></p>
+                    <p class="score"><span id="opp_score"></span>Pt.</p>
+                </div>
+                <h2 id="timerr">20</h2>
+            </div>
+            <div class="questions">
+                <div class="rounds">
+                    <div class="circle">
+                        <div class="round" id="r1"></div>
+                        <div class="round" id="r2"></div>
+                        <div class="round" id="r3"></div>
+                        <div class="round" id="r4"></div>
+                        <div class="round" id="r5"></div>
+                        <div class="round" id="r6"></div>
+                    </div>
+                </div>
+                <div class="question">
+                    <p id="ask"></p>
+                </div>
+                <hr id="whatever">
+                <div class="answers">
+                    <div class="query" id="aa" data-check="0" data-mine="0"><p class="answery" id="a"></p></div>
+                    <div class="query" id="bb" data-check="0" data-mine="0"><p class="answery" id="b"></p></div>
+                    <div class="clear"></div>
+                    <div class="query" id="cc" data-check="0" data-mine="0"><p class="answery" id="c"></p></div>
+                    <div class="query" id="dd" data-check="0" data-mine="0"><p class="answery" id="d"></p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+<script id="result-template" type="text/template">
+<h1 id="results"></h1>
+</script>
+
+<script src="libs/jquery-3.1.1.min.js"></script>
+
+
+<script src="libs/textFit.min.js"></script>
+
+<script src="libs/fastclick.js"></script>
+
+<script src="/socket.io/socket.io.js"></script>
+
+<script src="app.js"></script>
+
+</body>
+</html>

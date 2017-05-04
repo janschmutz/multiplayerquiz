@@ -1,0 +1,342 @@
+html, body {
+    background-color: #3393DC;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "BrookeShappell8";
+    src: url('/fonts/BrookeS8.ttf') format("truetype");
+}
+@font-face {
+    font-family: "Anabelle Script Light";
+    src: url('/fonts/AnabelleScriptLight.ttf') format("truetype");
+}
+
+.titleWrapper {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+}
+h1 {
+    margin: 0;
+    font-family: "Anabelle Script Light";
+    font-size: 120px;
+    color:white;
+    text-align: center;
+}
+.buttons img {
+    position: absolute;
+    top:160px;
+    left:50%;
+    width:500px;
+    margin-left: -250px;
+    z-index: 0;
+}
+button{
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.75);
+}
+.txtbtn {
+    background-color: #FF7642;
+    color: white;
+    border: 2px solid white;
+    font-size: 45px;
+    font-family: "BrookeShappell8";
+}
+#btnJoinGame {
+    position: absolute;
+    top:430px;
+    left:50%;
+    width:400px;
+    height:53px;
+    margin-left: -210px;
+    z-index: 1;
+}
+.joinGameWrapper{
+    text-align: center;
+    padding-top: 100px;
+}
+h3 {
+    color: white;
+    font-family: "BrookeShappell8";
+    font-size: 44px;
+    margin-bottom: 0;
+    text-align: center;
+}
+.avatare {
+
+}
+.avatar  {display: inline-block;
+    height: 120px;
+    /* equals max image height */
+    width: 120px;
+    background: white;
+    white-space: nowrap;
+    text-align: center;
+    margin: 1em 0.1em;
+    border-radius: 5px;
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.avatar img {
+    vertical-align: middle;
+    max-height: 120px;
+    max-width: 120px;
+}
+#btnStart{
+    position: absolute;
+    top:500px;
+    left:50%;
+    width:300px;
+    height:53px;
+    margin-left: -150px;
+}
+.loader {
+    text-align: center;
+}
+svg path,
+svg rect{
+    fill: white;
+}
+#duell{
+    margin-top: 30px;
+}
+.fullwrap{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.centered{
+    width: 90vw;
+    height: 90vh;
+    background-color: #1472BA;
+    border-radius: 10px;
+}
+.left{
+    width: 50%;
+    margin-top: 20px;
+    float:left;
+}
+#mid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.right{
+    width: 50%;
+    margin-top: 20px;
+    float:left;
+}
+#mid2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.clear{
+    clear: both;
+}
+#line{
+    box-shadow: -1px 0px 0px 0px rgba(255,255,255,1);
+}
+.contain{
+    width: 100px;
+    height:100px;
+}
+#vs {
+    position: absolute;
+    left: 50%;
+    margin-left: -2%;
+}
+h2 {
+    margin: 0;
+    color: white;
+    font-size: 30px;
+    font-family: "Avenir";
+    font-weight: bold;
+    text-align: center;
+}
+p {
+    text-align: center;
+    font-family: "BrookeShappell8";
+    color: white;
+    font-size: 20px;
+}
+.schatz {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#scha {
+    margin: 20px;
+}
+#schat {
+    font-size: 30px;
+    margin:20px;
+}
+.fullwrapper{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.centereded{
+    width: 90vw;
+    height: 90vh;
+}
+.players{
+    background-color: #1472BA;
+    width: 30%;
+    height: 100%;
+    float:left;
+    border-radius: 10px;
+}
+.questions{
+    background-color: #1472BA;
+    width: 67.5%;
+    height: 100%;
+    margin-left: 2.5%;
+    float:left;
+    border-radius: 10px;
+}
+hr {
+    display: block;
+    color:white;
+    width: 90%;
+    margin-bottom: 40px;
+}
+.whiteboy {
+    background-color: white;
+    width:80%;
+    height: 40px;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.icon-small{
+    margin-top: -15px;
+    margin-left: -15px;
+    float:left;
+}
+.insertid{
+    float:left;
+    color: black;
+    font-family: Avenir;
+    margin-top: 10px;
+}
+.score{
+    float:right;
+    color: black;
+    font-family: Avenir;
+    margin-top: 10px;
+}
+.rounds{
+    margin-top: 20px;
+    width: 100%;
+    height:20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circle{
+    height: 20px;
+}
+.round{
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+    background-color: white;
+    display: inline-block;
+    box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+.rounder{
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    margin: 2px;
+}
+.question{
+    width:70%;
+    min-height: 60px;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#ask{
+    font-family: Avenir;
+    font-size: 20px;
+
+}
+.answers{
+    margin-top: 10px;
+}
+#aa{
+    width:40%;
+    float:left;
+    background-color: white;
+    height:100px;
+    margin: 15px 2.5% 15px 7.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+#bb{
+    width:40%;
+    float:left;
+    background-color: white;
+    height:100px;
+    margin: 15px 7.5% 15px 2.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+#cc{
+    width:40%;
+    float:left;
+    background-color: white;
+    height:100px;
+    margin: 15px 2.5% 15px 7.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+#dd{
+    width:40%;
+    float:left;
+    background-color: white;
+    height:100px;
+    margin: 15px 7.5% 15px 2.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+#whatever{
+    margin-bottom: 0;
+}
+.answery{
+    color:black;
+    font-family: Avenir;
+    font-size: 25px;
+    max-width: 80%;
+}
